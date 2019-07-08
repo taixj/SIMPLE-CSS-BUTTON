@@ -1,0 +1,150 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: #5b5b5b;
+	background-size: cover;
+	text-align: center;
+}
+h2{
+	color: #eeeeee;
+	margin-top: 30px;
+	font-weight: bolder;
+	font-size: 18px;
+
+}
+p{
+	color: #eeeeee;
+	position: absolute;
+	bottom:100px;
+	left:50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	font-weight: bold;
+
+}
+.icon{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:70px;
+	height:70px;
+	background: rgba(0,0,0,.4);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 2s;
+	margin-right: 20px;
+}
+.icon::before{
+	content: '';
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:70px;
+	height:70px;
+	background: none;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	transition: 1s;
+}
+.icon::after{
+	content: '';
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:70px;
+	height:70px;
+	background: none;
+	border: 3px solid #eeeeee;
+	border-radius: 50%;
+	transition: 2s;
+}
+.icon:hover::before{
+	width:150px;
+	height: 150px;
+	opacity: 0;
+}
+.icon:hover::after{
+	width:150px;
+	height: 150px;
+	opacity: 0;
+}
+.up{
+	position: absolute;
+	top:5px;
+	left:50%;
+	transform: translateX(-50%);
+	width:17px;
+	height:17px;
+	background: white;
+	border-radius: 50%;
+	transition: 2s;
+}
+
+.down{
+	position: absolute;
+	bottom:5px;
+	left:50%;
+	transform: translateX(-50%);
+	width:17px;
+	height:17px;
+	background: white;
+	border-radius: 50%;
+	transition: 2s;
+}
+
+.left{
+	position: absolute;
+	top:50%;
+	left:5px;
+	transform: translateY(-50%);
+	width:17px;
+	height:17px;
+	background: white;
+	border-radius: 50%;
+	transition: 2s;
+}
+
+.right{
+	position: absolute;
+	top:50%;
+	right:5px;
+	transform: translateY(-50%);
+	width:17px;
+	height:17px;
+	background: white;
+	border-radius: 50%;
+	transition: 2s;
+}
+.icon.active{
+	background: rgba(255,255,255,.4);
+	
+}
+.icon.active .up{
+	opacity:0;
+	top:50%;
+	width:0;
+	height:0;
+}
+.icon.active .down{
+	opacity:0;
+	bottom:50%;
+	width:0;
+	height:0;
+
+}
+.icon.active .left{
+	width:55%;
+	height:10px;
+	border-radius: 5px;
+	transform: rotateZ(45deg);
+}
+.icon.active .right{
+	width:55%;
+	height:10px;
+	border-radius: 5px;
+	transform: rotateZ(-45deg);
+}
